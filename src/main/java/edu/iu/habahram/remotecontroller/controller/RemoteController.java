@@ -11,12 +11,12 @@ import java.util.List;
 @RequestMapping("/remotes")
 public class RemoteController {
 
-    IRemoteLoader remoteLoader = new RemoteLoader();
+    IRemoteLoader remoteLoader = RemoteLoader.getInstance();
 
     @PostMapping("/{id}")
     public boolean setup(@PathVariable int id, @RequestBody List<DeviceData> devices) {
         remoteLoader.setup(id, devices);
-        return  true;
+        return true;
     }
 
     @GetMapping("/{id}/on/{slot}")
