@@ -29,5 +29,10 @@ public class RemoteController {
         return remoteLoader.offButtonWasPushed(id, slot);
     }
 
+    @GetMapping("/{id}/undo/{slot}")
+    public String undo(@PathVariable int id, @PathVariable int slot) {
+        return remoteLoader.undoButtonWasPushed(id, slot);
+    }
+
 
 }

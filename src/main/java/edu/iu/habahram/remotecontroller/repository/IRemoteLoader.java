@@ -8,6 +8,9 @@ public interface IRemoteLoader {
     void setup(int id, List<DeviceData> devices);
 
     String onButtonWasPushed(int id, int slot);
+
     String offButtonWasPushed(int id, int slot);
+
+    String undoButtonWasPushed(int id, int slot);
 
 }
